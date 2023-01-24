@@ -9,4 +9,10 @@ simple calculator with
     [Java]
 #
     [JavaScript]
+#
+    [C]
+#
+    [C++]
+#
+    [C#]
 </b>
