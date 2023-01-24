@@ -1,7 +1,7 @@
 # calculator
 simple calculator with 
 #
-    [HTML & CSS]
+    [<p><font color="red">HTML & CSS</font></p>]
 #
     [Python]
 #
