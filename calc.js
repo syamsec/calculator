@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 
 rl.question('Enter the first number: ', (number1) => {
   rl.question('Enter the second number: ', (number2) => {
-      rl.question('Enter the operation (1 for addition(+), 2 for subtraction(-), 3 for multiplication(*), 4 for distribution(/)', (number3) => {
+      rl.question('Enter the operation (1 addition(+), 2 subtraction(-), 3 multiplication(*), 4 division(/)', (number3) => {
     let x = parseInt(number1);
     let y = parseInt(number2);
     let z = parseInt(number3);
