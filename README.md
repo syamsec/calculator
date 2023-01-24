@@ -6,5 +6,7 @@ simple calculator with
 #
     [Python]
 #
+    [Java]
+#
     [JavaScript]
 </b>
