@@ -4,3 +4,5 @@ simple calculator with
     [HTML & CSS]
 #
     [Python]
+#
+    [JavaScript]
