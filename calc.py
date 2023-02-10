@@ -3,21 +3,32 @@ print("Kalkulator Sederhana Python")
 print("---------------------------\n")
 print("1. Penjumlahan \t [+]")
 print("2. Pengurangan \t [-]")
-print("3. Perkalian  \t  [*]")
-print("4. Pembagian  \t  [/]")
+print("3. Perkalian  \t [*]")
+print("4. Pembagian  \t [/]")
+print("====================\n")
 
-pil = int(input("\nMasukan Pilihan Operasi : "))
+def calculator():
+    # Meminta input dari pengguna
+        
+    operator = input("Masukkan operator (1, 2, 3, 4): ")
+    num1 = float(input("Masukkan angka pertama: "))
+    num2 = float(input("Masukkan angka kedua: "))
+    
+    # Melakukan operasi matematika sesuai dengan operator yang dimasukkan
+    if operator == "1":
+        result = num1 + num2
+        print("Hasil:", result)
+    elif operator == "2":
+        result = num1 - num2
+        print("Hasil:", result)
+    elif operator == "3":
+        result = num1 * num2
+        print("Hasil:", result)
+    elif operator == "4":
+        result = num1 / num2
+        print("Hasil:", result)
+    else:
+        print("Operator tidak valid.")
 
-x= int(input("Bilangan 1 : "))
-y= int(input("Bilangan 2 : "))
-
-if pil == 1:
-   hasil = x+y
-elif pil == 2:
-   hasil = x-y
-elif pil == 3:
-   hasil = x*y
-elif pil == 4:
-   hasil = x/y
-
-print("\nHasil : %d" %hasil)
+# Memanggil fungsi calculator
+calculator()
