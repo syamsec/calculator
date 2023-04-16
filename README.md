@@ -2,7 +2,7 @@
 simple calculator with 
 <b>
 #
-    [HTML & CSS]
+    [HTML & CSS & JS]
 #
     [Python]
 #
