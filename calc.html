@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Mitr', sans-serif;
+      User-select: none;
+    }
+    body {
+      width: 100%;
+      height: 100vh;
+      background-color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      Flex-direction: column;
+    }
+    .container {
+      background-image: linear-gradient(to bottom right,#454545,#3E3E3E);
+      padding: 20px;
+    }
+    .container input {
+      margin-bottom: 30px;
+      width: 100%;
+      background-color: white;
+      border: none;
+      text-align: right;
+      font-size: 20px;
+    }
+    .btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .btn {
+      background-color: skyblue;
+      border: none;
+      padding: 10px;
+      font-size: 17px;
+      outline: none;
+      Border-radius: 10px;
+    }
+    .btn:active {
+      background-color: white;
+    }
+    .btn:nth-child(12) {
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+    .btn:nth-child(16) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" disabled>
+    <div class="btns">
+      <button class="btn">Clear</button>
+      <button class="btn backspace">Delete</button>
+      <button class="btn">/</button>
+      <button class="btn">*</button>
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn">-</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn">+</button>
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn">0</button>
+      <button class="btn">.</button>
+      <button class="btn">=</button>
+    </div>
+  </div>
+  <script>
+    let btns = document.querySelectorAll(".btn");
+    let input = document.querySelector("input");
+    for (elements of btns) {
+      elements.addEventListener("click", (e)=> {
+        if (e.target.innerHTML == "=") {
+          input.value = eval(input.value)
+        } else if (e.target.innerHTML == "Clear") {
+          input.value = "";
+        } else if (e.target.innerHTML == 'Delete') {
+          input.value = input.value.substring(0, input.value.length-1);
+        } else {
+          input.value += e.target.innerHTML.trim();
+        }
+      })
+    }
+  </script>
+</body>
+</html>
